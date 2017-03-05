@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ task.title }} - {{task.life.title}}{% endblock %}
+
+{% block content %}
+<article>
+  <h2>{{ task.life.title }}</h2>
+  <h3>{{ task.title }}</h3>
+  {{ task.content|linebreaks }}
+</article>
+{% endblock %}

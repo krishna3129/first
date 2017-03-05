@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ life.title }}{% endblock%}
+
+{% block content %}
+<article>
+  <h2>{{ life.title }}</h2>
+  {{ life.description }}
+
+  <section>
+    {% for task in life.task_set.all %}
+    <h3>{{ task.title }}</h3>
+    {{ task.description }}
+    {% endfor %}
+  </section>
+{% endblock %}
